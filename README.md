@@ -107,7 +107,7 @@ Get the average of the postion of hip and neck as the y_error and x_error.
     body_error = (((jo.dic['right_hip']['x'] + jo.dic['left_hip']['x']) / 2) + jo.dic['neck']['x']) / 2
     pub_x_error.publish(str(body_error))
 
-`find_people` will use these error to drive to customer.
+`find_people` will use these error to drive to customer. With these error, `find_people` can adjust the posture of robot by sending messages of velocity to topic `/cmd_vel_mux/input/navi`.
 
 
 ## Navigation
