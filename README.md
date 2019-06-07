@@ -23,10 +23,14 @@ __Auther: [Zhang Mingxin](https://github.com/nkMengXin), 1611260__
 
 It will initiate a subscriber, and when the message is received, destroy the subscriber.
 
-First, `main.py` will wait for message from node `body_pose`. If the customer's waving is detected, the robot will say "Yes, I'm coming.". If there's nobody in the visual field, the robot will turn itself to find people who is waving. And then `main.py` will publish a message to `find_people` to start the process of finding people. This process has some pause because of the delay of the Baidu API. So the robot may not drive smoothly.
+First, `main.py` will wait for message from node `body_pose`. If the customer's waving is detected, the robot will say "Yes, I'm coming". If there's nobody in the visual field, the robot will turn itself to find people who is waving. And then `main.py` will publish a message to `find_people` to start the process of finding people. This process has some pause because of the delay of the Baidu API. So the robot may not drive smoothly.
+
+When the robot is close to the customer, the robot will save its location and publish it to the topic `start_pos`. The robot will ask the customer "Hello! What would you like to have? Coffee or tea?" And then if "coffee" or "tea" is in the customer's answer, the robot will say "Yes, I'll bring you a cup of coffee/tea".
+
+When the robot get which drink to bring, the navigation will start. Robot will drive to the fixed location and then use Kinect and `darknet_ros` to get the information (kind and depth) of the thing to catch. When the adjustment is finished, the arm will start to catch. Then the robot will drive to the customer back and say "'Here is your coffee/tea. Enjoy yourself" and raise up the drink to the customer.
 
 ## Navigation
-In the file `catkin_ws/src/rc-home-edu-learn-ros/rchomeedu_navigation/scripts/my_navigation.py` is the process of the navigation between the fixed location and the customer's location which received from the node `find_people`.
+In the file `catkin_ws/src/rc-home-edu-learn-ros/rchomeedu_navigation/scripts/my_navigation.py` is the process of the navigation between the fixed location and the customer's location which received from the node `find_people`. 
 
     def get_start_pose(self, start_pose):
       global A_x, A_y, A_theta
