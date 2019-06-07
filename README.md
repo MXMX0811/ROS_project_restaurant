@@ -23,7 +23,7 @@ __Auther: [Zhang Mingxin](https://github.com/nkMengXin), 1611260__
 
 It will initiate a subscriber, and when the message is received, destroy the subscriber.
 
-
+First, `main.py` will wait for message from node `body_pose`. If the customer's waving is detected, the robot will say "Yes, I'm coming.". If there's nobody in the visual field, the robot will turn itself to find people who is waving. And then `main.py` will publish a message to `find_people` to start the process of finding people. This process has some pause because of the delay of the Baidu API. So the robot may not drive smoothly.
 
 ## Navigation
 In the file `catkin_ws/src/rc-home-edu-learn-ros/rchomeedu_navigation/scripts/my_navigation.py` is the process of the navigation between the fixed location and the customer's location which received from the node `find_people`.
