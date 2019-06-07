@@ -4,4 +4,4 @@ This is a `ROS` project developed on the basis of `RoboCup@Home` `Restaurant`. T
 
 __Auther: [Zhang Mingxin](https://github.com/nkMengXin)  , 1611260__
 
-![](https://github.com/ROS_project_restaurant/A2EEFCC228E3F8F6F3BA90471DA6E8BF.png) 
+![](https://github.com/nkMengXin/ROS_project_restaurant/A2EEFCC228E3F8F6F3BA90471DA6E8BF.png) 
