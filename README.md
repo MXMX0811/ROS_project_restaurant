@@ -5,3 +5,7 @@ This is a `ROS` project developed on the basis of `RoboCup@Home` `Restaurant`. T
 __Auther: [Zhang Mingxin](https://github.com/nkMengXin)  , 1611260__
 
 ![](https://github.com/nkMengXin/ROS_project_restaurant/raw/master/A2EEFCC228E3F8F6F3BA90471DA6E8BF.png)
+
+Based on the [Baidu API](https://cloud.baidu.com/product/body), can recognize the key points of human body(like wrists, nose and neck).
+
+Based on the [darknet_ros](https://github.com/leggedrobotics/darknet_ros) package, can achieve the Real-Time Object Detection.
