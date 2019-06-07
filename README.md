@@ -97,7 +97,7 @@ It may spend about 1s to get the result. The returned information's form is simi
 In `res['person_num']` is the number of the people, and each person's information is in `res['person_info']`. You can get the first person's key points postions in `res['person_info'][0]['body_parts']`. You can use OpenCV draw some points and lines to mark the positions on the screen.
 
 
-![](https://github.com/nkMengXin/ROS_project_restaurant/raw/master/2019-06-06 19-48-59屏幕截图.png.png)
+![](https://github.com/nkMengXin/ROS_project_restaurant/raw/master/body_pose.png)
 
 
 ## Navigation
