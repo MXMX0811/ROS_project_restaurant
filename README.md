@@ -65,6 +65,35 @@ Use `xfei_asr` package to recognize the content of customer's answer. You should
 
     def listener():
         rospy.Subscriber('xfwords', String, listener_callback)
+        
+## Detection of the Body Key Point
+The file format that Baidu API requests is Binary File. So the screen captured by the OpenCV must be transformed into binary file.
+
+    ret, frame = cap.read()
+            img_encode = cv2.imencode('.jpg', frame)[1]
+            image = base64.b64encode(img_encode)
+            image64 = str(image)
+            image_type = "BASE64"
+            params = {'image': image64,'image_type':"BASE64"}
+            params = urlencode(params).encode("utf-8")
+            
+You may [sign up an account](http://ai.baidu.com/?track=cp:aipinzhuan|pf:pc|pp:AIpingtai|pu:title|ci:|kw:10005792) and then get `access_token` by this way:
+
+    curl -i -k 'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=（This is API Key）&client_secret=（This is Secret Key）'
+   
+The access_token should be updated by month.
+
+    request_url = "https://aip.baidubce.com/rest/2.0/image-classify/v1/body_analysis"
+    access_token = '[24.cb4ed767145d6bc628ca085d6ea3f3d3.2592000.1561474761.282335-16350696]'
+    request_url = request_url + "?access_token=" + access_token
+    request = urllib2.urlopen(url=request_url, data=params)
+    
+It may spend about 1s to get the result. The returned information's form is similar to `json`. You can use this method to change it into json:
+
+    content = request.read()  
+    result = str(content)
+    res = json.loads(result)
+
 
 ## Navigation
 In the file `catkin_ws/src/rc-home-edu-learn-ros/rchomeedu_navigation/scripts/my_navigation.py` is the process of the navigation between the fixed location and the customer's location which received from the node `find_people`. 
