@@ -29,6 +29,43 @@ When the robot is close to the customer, the robot will save its location and pu
 
 When the robot get which drink to bring, the navigation will start. Robot will drive to the fixed location and then use Kinect and `darknet_ros` to get the information (kind and depth) of the thing to catch. When the adjustment is finished, the arm will start to catch. Then the robot will drive to the customer back and say "'Here is your coffee/tea. Enjoy yourself" and raise up the drink to the customer.
 
+## Voice interaction
+Robot can publish the text to the `soundplay_node` to speak out the content.
+
+    def talk(text):
+        pub = rospy.Publisher('speech', String, queue_size=10)
+        time.sleep(0.1)
+        #rospy.loginfo(text)
+        pub.publish(text) 
+        
+`text2speech.py` subscribes the topic `speech`. In the subscriber's callback function:
+
+    def callback(data):
+        pub = rospy.Publisher('speak_finish', String, queue_size=10)
+        rospy.loginfo(data.data)
+        soundhandle = SoundClient()
+        rospy.sleep(1)
+        text = data.data
+        voice = 'voice_kal_diphone'
+        volume = 1.0
+        print 'Saying: %s' % text
+        print 'Voice: %s' % voice
+        print 'Volume: %s' % volume
+        soundhandle.say(text, voice, volume)
+        rospy.sleep(7)
+        pub.publish('finish')
+        
+Use `xfei_asr` package to recognize the content of customer's answer. You should edit the `.cpp` before your using. You should change the sign up an account on the platform of xunfei and download the SDK. You should put the `libmsc.so` into `/catkin_ws/src/xfei_asr/lib`. And then subcribe the topic `xfwords`, and then can get the string of the words. You can write a subcriber like this:
+
+    def listener_callback(data):
+        global feed_back
+        #rospy.loginfo(data.data)
+        feed_back = data.data
+
+
+    def listener():
+        rospy.Subscriber('xfwords', String, listener_callback)
+
 ## Navigation
 In the file `catkin_ws/src/rc-home-edu-learn-ros/rchomeedu_navigation/scripts/my_navigation.py` is the process of the navigation between the fixed location and the customer's location which received from the node `find_people`. 
 
