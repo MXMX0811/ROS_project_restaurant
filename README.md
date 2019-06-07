@@ -26,3 +26,6 @@ In the file catkin_ws/src/rc-home-edu-learn-ros/rchomeedu_navigation/scripts/my_
       A_y = float(pose[1])
       A_theta = float(pose[2])
 
+The `function get_start_pose` will be called when this is executing:
+
+    rospy.Subscriber('start_pos', String, self.get_start_pose)
