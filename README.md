@@ -109,6 +109,15 @@ Get the average of the postion of hip and neck as the y_error and x_error.
 
 `find_people` will use these error to drive to customer. With these error, `find_people` can adjust the posture of robot by sending messages of velocity to topic `/cmd_vel_mux/input/navi`.
 
+## Object recognizing and catching
+`darknet_ros` is a ROS package developed for object detection in camera images. 
+
+![](https://github.com/leggedrobotics/darknet_ros/blob/master/darknet_ros/doc/test_detection.png)  
+
+In file `/catkin_ws/src/Myrobot/src/restautant/tuning_control.py` you can get the position of the target object by `darknet_ros`. And then you can use Kinect to get the depth information of the target area. With the position and depth information of target area, robot can drive to the correct location and ready to catch the target object.
+
+![](https://github.com/leggedrobotics/darknet_ros/blob/master/darknet_ros/doc/psb.jpeg)  
+
 
 ## Navigation
 In the file `catkin_ws/src/rc-home-edu-learn-ros/rchomeedu_navigation/scripts/my_navigation.py` is the process of the navigation between the fixed location and the customer's location which received from the node `find_people`. 
