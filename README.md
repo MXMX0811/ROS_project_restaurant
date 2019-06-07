@@ -116,7 +116,7 @@ Get the average of the postion of hip and neck as the y_error and x_error.
 
 In file `/catkin_ws/src/Myrobot/src/restautant/tuning_control.py` you can get the position of the target object by `darknet_ros`. And then you can use Kinect to get the depth information of the target area. With the position and depth information of target area, robot can drive to the correct location and ready to catch the target object.
 
-![](https://github.com/leggedrobotics/darknet_ros/blob/master/darknet_ros/doc/psb.jpeg)  
+![](https://github.com/nkMengXin/ROS_project_restaurant/raw/master/psb.jpeg)  
 
 
 ## Navigation
