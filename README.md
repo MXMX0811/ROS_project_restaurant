@@ -10,8 +10,8 @@ Based on the [Baidu API](https://cloud.baidu.com/product/body), can recognize th
 
 Based on the [darknet_ros](https://github.com/leggedrobotics/darknet_ros) package, can achieve the Real-Time Object Detection.
 
-*The tuetlebot's navigation is based on the package `rchomeedu_navigation`.
+* The tuetlebot's navigation is based on the package `rchomeedu_navigation`.
 
-*The robotic arm's catching is based on the package `rchomeedu_arm`.
+* The robotic arm's catching is based on the package `rchomeedu_arm`.
 
-*The voice interaction is based on `xfei_asr`.
+* The voice interaction is based on `xfei_asr`.
