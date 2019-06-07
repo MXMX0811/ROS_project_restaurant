@@ -16,6 +16,15 @@ __Auther: [Zhang Mingxin](https://github.com/nkMengXin), 1611260__
 
 * The voice interaction is based on `xfei_asr`.
 
+## main.py
+`main.py` is used to control and manage all of the functions of the robot. Because the ROS nodes are parallel, so we can use wait_for_message() to block the process of the programme and then publish some messages to it to let it countinue. The function is used like this:
+
+    rospy.wait_for_message('topic name', type)
+
+It will initiate a subscriber, and when the message is received, destroy the subscriber.
+
+
+
 ## Navigation
 In the file `catkin_ws/src/rc-home-edu-learn-ros/rchomeedu_navigation/scripts/my_navigation.py` is the process of the navigation between the fixed location and the customer's location which received from the node `find_people`.
 
@@ -51,4 +60,4 @@ The robot will go to the fixed location (saved as B) when:
             pub.publish('ready_to_catch') 	#publish message to the node used to control the catching
             rospy.wait_for_message('arm2navi', String)	#countinue when the catching finish
 
-And when the catching process finish, the robot will go back to A. This part of code is similar to above.
+And when the catching process finish, the robot will go back to A. This part of code is similar to above. And then this node will publish a message that tells the arm should raise the drink to the customer.
