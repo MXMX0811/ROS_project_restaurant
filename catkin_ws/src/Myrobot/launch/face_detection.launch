@@ -1,0 +1,7 @@
+<!-- -*- mode: XML -*- -->
+
+<launch>
+	<node pkg="sound_play" type="soundplay_node.py" name="sound_play" />
+    <node pkg="Myrobot" type="face_detection.py" name="find_face"  launch-prefix="gnome-terminal -e"/>
+    <node pkg="Myrobot" type="face_listener.py" name="say" />
+</launch>

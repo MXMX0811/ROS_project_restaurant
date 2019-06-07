@@ -1,0 +1,22 @@
+Metadata-Version: 1.0
+Name: create_driver
+Version: 2.3.1
+Summary: Driver for iRobot Create and Roomba
+    
+    This is a generic driver for iRobot Create that currently holds
+    implementations for Turtlebot and Roomba. Port
+    of pyrobot.py by Damon Kohler.  I...
+Home-page: http://ros.org/wiki/create_driver
+Author: OSRF
+Author-email: turtlebot@osrfoundation.org
+License: MIT
+Description: Driver for iRobot Create and Roomba
+            
+            This is a generic driver for iRobot Create that currently holds
+            implementations for Turtlebot and Roomba. Port
+            of pyrobot.py by Damon Kohler.  It is currently labeled as
+            turtlebot_driver pending review by the entire create community
+            before using the name create_driver.
+          
+            For ROS bindings, please see turtlebot_node.
+Platform: UNKNOWN

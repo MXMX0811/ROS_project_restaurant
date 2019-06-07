@@ -1,0 +1,8 @@
+prefix=/home/zmx/catkin_ws/install
+
+Name: rchomeedu_arm
+Description: Description of rchomeedu_arm
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/zmx/catkin_ws/install/lib 
+Requires: 

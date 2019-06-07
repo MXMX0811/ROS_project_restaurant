@@ -1,0 +1,8 @@
+prefix=/home/zmx/catkin_ws/install
+
+Name: restaurant_pkg
+Description: Description of restaurant_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/zmx/catkin_ws/install/lib 
+Requires: 

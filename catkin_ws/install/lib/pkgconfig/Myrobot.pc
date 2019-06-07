@@ -1,0 +1,8 @@
+prefix=/home/zmx/catkin_ws/install
+
+Name: Myrobot
+Description: Description of Myrobot
+Version: 0.0.0
+Cflags: -I/home/zmx/catkin_ws/install/include
+Libs: -L/home/zmx/catkin_ws/install/lib 
+Requires: 

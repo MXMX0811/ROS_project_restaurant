@@ -1,0 +1,8 @@
+prefix=/home/zmx/catkin_ws/install
+
+Name: create_gazebo_plugins
+Description: Description of create_gazebo_plugins
+Version: 2.3.1
+Cflags: -I/home/zmx/catkin_ws/install/include
+Libs: -L/home/zmx/catkin_ws/install/lib -lgazebo_ros_create
+Requires: create_node gazebo_ros geometry_msgs nav_msgs roscpp sensor_msgs

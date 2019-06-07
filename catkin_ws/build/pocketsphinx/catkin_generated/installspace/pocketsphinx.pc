@@ -1,0 +1,8 @@
+prefix=/home/zmx/catkin_ws/install
+
+Name: pocketsphinx
+Description: Description of pocketsphinx
+Version: 1.0.1
+Cflags: 
+Libs: -L/home/zmx/catkin_ws/install/lib 
+Requires: 

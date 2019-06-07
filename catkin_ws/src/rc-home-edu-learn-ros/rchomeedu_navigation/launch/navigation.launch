@@ -1,0 +1,8 @@
+<launch>
+
+  <node name="navi_point" pkg="rchomeedu_navigation" type="my_navigation.py" output="screen">
+
+  </node>
+
+</launch>
+

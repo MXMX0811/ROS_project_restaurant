@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/opencv_apps_generate_messages_cpp"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/FaceArray.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/RotatedRectStamped.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/Contour.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/LineArray.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/FlowArrayStamped.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/Face.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/Flow.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/RotatedRectArray.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/FlowStamped.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/Rect.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/RectArrayStamped.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/MomentArray.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/Line.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/ContourArrayStamped.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/Point2D.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/CircleArray.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/Point2DArray.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/FaceArrayStamped.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/Point2DArrayStamped.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/Point2DStamped.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/ContourArray.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/RotatedRectArrayStamped.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/Size.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/Moment.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/FlowArray.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/CircleArrayStamped.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/LineArrayStamped.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/Circle.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/MomentArrayStamped.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/RectArray.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/RotatedRect.h"
+  "/home/zmx/catkin_ws/devel/include/opencv_apps/FaceRecognitionTrain.h"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/opencv_apps_generate_messages_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

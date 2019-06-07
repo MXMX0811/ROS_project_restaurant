@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/opencv_apps_generate_messages_nodejs"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/FaceArray.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/RotatedRectStamped.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/Contour.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/LineArray.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/FlowArrayStamped.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/Face.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/Flow.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/RotatedRectArray.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/FlowStamped.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/Rect.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/RectArrayStamped.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/MomentArray.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/Line.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/ContourArrayStamped.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/Point2D.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/CircleArray.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/Point2DArray.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/FaceArrayStamped.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/Point2DArrayStamped.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/Point2DStamped.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/ContourArray.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/RotatedRectArrayStamped.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/Size.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/Moment.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/FlowArray.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/CircleArrayStamped.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/LineArrayStamped.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/Circle.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/MomentArrayStamped.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/RectArray.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/msg/RotatedRect.js"
+  "/home/zmx/catkin_ws/devel/share/gennodejs/ros/opencv_apps/srv/FaceRecognitionTrain.js"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/opencv_apps_generate_messages_nodejs.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

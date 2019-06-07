@@ -1,0 +1,23 @@
+Metadata-Version: 1.0
+Name: create_node
+Version: 2.3.1
+Summary: iRobot Create ROS driver node
+    
+    ROS bindings for the Create/Roomba driver.
+    
+    This is based on otl_roomba driver by OTL, ported to use
+    create_driver's implementation instead. 
+    ...
+Home-page: http://ros.org/wiki/create_node
+Author: OSRF
+Author-email: turtlebot@osrfoundation.org
+License: BSD
+Description: iRobot Create ROS driver node
+            
+            ROS bindings for the Create/Roomba driver.
+            
+            This is based on otl_roomba driver by OTL, ported to use
+            create_driver's implementation instead. 
+            This also contains a 'bonus' feature from the turtlebot 
+            driver by Xuwen Cao and Morgan Quigley.
+Platform: UNKNOWN

@@ -1,0 +1,18 @@
+<!-- -*- mode: XML -*- -->
+
+<launch>
+	<node pkg="sound_play" type="soundplay_node.py" name="sound_play" />
+	<node pkg="Myrobot" type="main.py" name="main" launch-prefix="gnome-terminal -e"/>
+	<node pkg="Myrobot" type="text2speech.py" name="say" />
+	<node pkg="Myrobot" type="body_pose.py" name="body_pose"/>
+	<node pkg="Myrobot" type="find_people.py" name="find_people" launch-prefix="gnome-terminal -e"/>
+	<node pkg="Myrobot" type="tuning_control.py" name="catch_object" launch-prefix="gnome-terminal -e"/>
+	<node pkg="xfei_asr" type="iat_publish_speak" name="iat_publish_speak" launch-prefix="gnome-terminal -e"/>
+	<node pkg="rchomeedu_arm" type="catch.py" name="catch" />
+	
+	<include file="$(find rchomeedu_navigation)/launch/navigation.launch"/>
+	<include file="$(find turtlebot_navigation)/launch/amcl_demo.launch" />
+	<include file="$(find turtlebot_rviz_launchers)/launch/view_navigation.launch" />
+	<include file="$(find darknet_ros)/launch/yolo_v3.launch" />
+	<include file="$(find rchomeedu_arm)/launch/arm.launch"/>
+</launch>
