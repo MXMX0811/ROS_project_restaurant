@@ -118,6 +118,8 @@ In file `/catkin_ws/src/Myrobot/src/restautant/tuning_control.py` you can get th
 
 ![](https://github.com/nkMengXin/ROS_project_restaurant/raw/master/psb.jpeg)  
 
+After the robot adjusts to the correct posture, the arm will catch the targrt object.
+
 
 ## Navigation
 In the file `catkin_ws/src/rc-home-edu-learn-ros/rchomeedu_navigation/scripts/my_navigation.py` is the process of the navigation between the fixed location and the customer's location which received from the node `find_people`. 
@@ -155,3 +157,27 @@ The robot will go to the fixed location (saved as B) when:
             rospy.wait_for_message('arm2navi', String)	#countinue when the catching finish
 
 And when the catching process finish, the robot will go back to A. This part of code is similar to above. And then this node will publish a message that tells the arm should raise the drink to the customer.
+
+## launch
+To run this project, you should run this `roslaunch turtlebot_bringup minimal.launch` to bring up turtlebot after you connect your computer to turtlebot. And then run `roslaunch Myrobot restaurant.launch` to start. You may Click on the map to initiate the pose.
+
+The `roslaunch Myrobot restaurant.launch` is like this:
+
+    <!-- -*- mode: XML -*- -->
+
+    <launch>
+        <node pkg="sound_play" type="soundplay_node.py" name="sound_play" />
+        <node pkg="Myrobot" type="main.py" name="main" launch-prefix="gnome-terminal -e"/>
+        <node pkg="Myrobot" type="text2speech.py" name="say" />
+        <node pkg="Myrobot" type="body_pose.py" name="body_pose"/>
+        <node pkg="Myrobot" type="find_people.py" name="find_people" launch-prefix="gnome-terminal -e"/>
+        <node pkg="Myrobot" type="tuning_control.py" name="catch_object" launch-prefix="gnome-terminal -e"/>
+        <node pkg="xfei_asr" type="iat_publish_speak" name="iat_publish_speak" launch-prefix="gnome-terminal -e"/>
+        <node pkg="rchomeedu_arm" type="catch.py" name="catch" />
+
+        <include file="$(find rchomeedu_navigation)/launch/navigation.launch"/>
+        <include file="$(find turtlebot_navigation)/launch/amcl_demo.launch" />
+        <include file="$(find turtlebot_rviz_launchers)/launch/view_navigation.launch" />
+        <include file="$(find darknet_ros)/launch/yolo_v3.launch" />
+        <include file="$(find rchomeedu_arm)/launch/arm.launch"/>
+    </launch>
