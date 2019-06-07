@@ -17,7 +17,7 @@ __Auther: [Zhang Mingxin](https://github.com/nkMengXin), 1611260__
 * The voice interaction is based on `xfei_asr`.
 
 ## Navigation
-In the file catkin_ws/src/rc-home-edu-learn-ros/rchomeedu_navigation/scripts/my_navigation.py is the process of the navigation between the fixed location and the customer's location which received from the node `find_people`.
+In the file `catkin_ws/src/rc-home-edu-learn-ros/rchomeedu_navigation/scripts/my_navigation.py` is the process of the navigation between the fixed location and the customer's location which received from the node `find_people`.
 
     def get_start_pose(self, start_pose):
       global A_x, A_y, A_theta
@@ -26,6 +26,27 @@ In the file catkin_ws/src/rc-home-edu-learn-ros/rchomeedu_navigation/scripts/my_
       A_y = float(pose[1])
       A_theta = float(pose[2])
 
-The `function get_start_pose` will be called when this is executing:
+The `function get_start_pose` will be called when this is executed:
 
     rospy.Subscriber('start_pos', String, self.get_start_pose)
+
+The location of the customer will be saved as A_x, A_y and A_theta. These will be transformed into quaternion and then sent to movebase.
+
+The robot will go to the fixed location (saved as B) when:
+
+    if start == 1:
+        pub = rospy.Publisher('catch_start', String, queue_size=10)
+        rospy.loginfo("Going to point B")
+        rospy.sleep(2)
+        self.goal.target_pose.pose = locations['B']
+        self.move_base.send_goal(self.goal)
+        waiting = self.move_base.wait_for_result(rospy.Duration(300))
+        if waiting == 1:
+            rospy.loginfo("Reached point B")
+            rospy.sleep(2)
+            rospy.loginfo("Ready to go back")
+            rospy.sleep(2)
+            global start
+            start = 0
+            pub.publish('ready_to_catch') 	#publish message to the node used to control the catching
+            rospy.wait_for_message('arm2navi', String)	#countinue when the catching finish
