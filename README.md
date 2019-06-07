@@ -6,12 +6,15 @@ __Auther: [Zhang Mingxin](https://github.com/nkMengXin), 1611260__
 
 ![](https://github.com/nkMengXin/ROS_project_restaurant/raw/master/A2EEFCC228E3F8F6F3BA90471DA6E8BF.png)
 
-Based on the [Baidu API](https://cloud.baidu.com/product/body), can recognize the key points of human body(like wrists, nose and neck).
+* Based on the [Baidu API](https://cloud.baidu.com/product/body), can recognize the key points of human body(like wrists, nose and neck).
 
-Based on the [darknet_ros](https://github.com/leggedrobotics/darknet_ros) package, can achieve the Real-Time Object Detection.
+* Based on the [darknet_ros](https://github.com/leggedrobotics/darknet_ros) package, can achieve the Real-Time Object Detection.
 
 * The tuetlebot's navigation is based on the package `rchomeedu_navigation`.
 
 * The robotic arm's catching is based on the package `rchomeedu_arm`.
 
 * The voice interaction is based on `xfei_asr`.
+
+## Navigation
+In the file catkin_ws/src/rc-home-edu-learn-ros/rchomeedu_navigation/scripts/my_navigation.py is the process of the navigation between the fixed location and the customer's location which received from the node `find_people`.
