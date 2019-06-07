@@ -99,6 +99,16 @@ In `res['person_num']` is the number of the people, and each person's informatio
 
 ![](https://github.com/nkMengXin/ROS_project_restaurant/raw/master/body_pose.png)
 
+Get the average of the postion of hip and neck as the y_error and x_error.
+
+    body_height = ((jo.dic['right_hip']['y'] + jo.dic['left_hip']['y']) / 2 + jo.dic['neck']['y']) / 2
+    pub_height.publish(str(body_height))
+
+    body_error = (((jo.dic['right_hip']['x'] + jo.dic['left_hip']['x']) / 2) + jo.dic['neck']['x']) / 2
+    pub_x_error.publish(str(body_error))
+
+`find_people` will use these error to drive to customer.
+
 
 ## Navigation
 In the file `catkin_ws/src/rc-home-edu-learn-ros/rchomeedu_navigation/scripts/my_navigation.py` is the process of the navigation between the fixed location and the customer's location which received from the node `find_people`. 
