@@ -19,10 +19,10 @@ __Auther: [Zhang Mingxin](https://github.com/nkMengXin), 1611260__
 ## Navigation
 In the file catkin_ws/src/rc-home-edu-learn-ros/rchomeedu_navigation/scripts/my_navigation.py is the process of the navigation between the fixed location and the customer's location which received from the node `find_people`.
 
-  def get_start_pose(self, start_pose):
-    global A_x, A_y, A_theta
-    pose = start_pose.data.split(',')
-    A_x = float(pose[0])
-    A_y = float(pose[1])
-    A_theta = float(pose[2])
+    def get_start_pose(self, start_pose):
+      global A_x, A_y, A_theta
+      pose = start_pose.data.split(',')
+      A_x = float(pose[0])
+      A_y = float(pose[1])
+      A_theta = float(pose[2])
 
