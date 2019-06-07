@@ -93,6 +93,8 @@ It may spend about 1s to get the result. The returned information's form is simi
     content = request.read()  
     result = str(content)
     res = json.loads(result)
+    
+In `res['person_num']` is the number of the people, and each person's information is in `res['person_info']`. You can get the first person's key points postions in `res['person_info'][0]['body_parts']`. You can use OpenCV draw some points and lines to mark the positions on the screen.
 
 
 ## Navigation
