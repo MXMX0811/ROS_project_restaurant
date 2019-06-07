@@ -50,3 +50,5 @@ The robot will go to the fixed location (saved as B) when:
             start = 0
             pub.publish('ready_to_catch') 	#publish message to the node used to control the catching
             rospy.wait_for_message('arm2navi', String)	#countinue when the catching finish
+
+And when the catching process finish, the robot will go back to A. This part of code is similar to above.
