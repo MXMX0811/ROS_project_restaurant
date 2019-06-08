@@ -70,12 +70,12 @@ Use `xfei_asr` package to recognize the content of customer's answer. You should
 The file format that Baidu API requests is Binary File. So the screen captured by the OpenCV must be transformed into binary file.
 
     ret, frame = cap.read()
-            img_encode = cv2.imencode('.jpg', frame)[1]
-            image = base64.b64encode(img_encode)
-            image64 = str(image)
-            image_type = "BASE64"
-            params = {'image': image64,'image_type':"BASE64"}
-            params = urlencode(params).encode("utf-8")
+    img_encode = cv2.imencode('.jpg', frame)[1]
+    image = base64.b64encode(img_encode)
+    image64 = str(image)
+    image_type = "BASE64"
+    params = {'image': image64,'image_type':"BASE64"}
+    params = urlencode(params).encode("utf-8")
             
 You may [sign up an account](http://ai.baidu.com/?track=cp:aipinzhuan|pf:pc|pp:AIpingtai|pu:title|ci:|kw:10005792) and then get `access_token` by this way:
 
