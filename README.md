@@ -120,6 +120,8 @@ In file `/catkin_ws/src/Myrobot/src/restautant/tuning_control.py` you can get th
 
 After the robot adjusts to the correct posture, the arm will catch the targrt object.
 
+![](https://github.com/nkMengXin/ROS_project_restaurant/raw/master/FDC24020C5CE54560CCB993B4038F8A7.png)
+
 
 ## Navigation
 In the file `catkin_ws/src/rc-home-edu-learn-ros/rchomeedu_navigation/scripts/my_navigation.py` is the process of the navigation between the fixed location and the customer's location which received from the node `find_people`. 
