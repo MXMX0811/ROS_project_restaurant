@@ -1,10 +1,6 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
-"""
-    Date: 2019/06/06
-    Author: Guo Zijian
-    Abstract: from darknet get bounding box messages and depth image to find the coordinates of bottle
-"""
+
 import roslib
 import rospy
 from std_msgs.msg import String
